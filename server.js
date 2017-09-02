@@ -20,12 +20,17 @@ app.get('/ui/main.js', function (req, res) {
 /* Article Handeling */
 // Article one
 app.get('/article-one', function(req, res){
-    res.send('Article one will be served here');
+    res.send('Article One will be served here');
 });
 
 // Article two
 app.get('/article-Two', function(req, res){
     res.send('Article Two will be served here');
+});
+
+// Article three
+app.get('/article-three', function(req, res){
+    res.send('Article Three will be served here');
 });
 
 
