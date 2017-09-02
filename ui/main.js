@@ -9,5 +9,5 @@ function moveRight (){
 }
 
 jet.onclick = function(){
-    var interval = setInterval(noveRight, 50);
+    var interval = setInterval(moveRight, 50);
 };
