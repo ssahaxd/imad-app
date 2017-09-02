@@ -60,7 +60,7 @@ function creatTemplate(data){
     <!doctype html>
     <html lang="en">
         <head>
-            <title>${data.title}}</title>
+            <title>${data.title}</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width initial-scale = 1">
             <link href="/ui/style.css" rel="stylesheet" />
@@ -84,8 +84,8 @@ function creatTemplate(data){
 /* Article Handeling */
 // Article one
 app.get('/:articleName', function(req, res){
-    var articleName = req.param.articleName;
-  res.send(creatTemplate(articles['articleName']));
+    var articleName = req.params.articleName;
+  res.send(creatTemplate(articles[articleName]));
 });
 
 
