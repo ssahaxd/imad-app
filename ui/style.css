@@ -476,3 +476,8 @@ margin-bottom: 50px;
     color: #FF7867;
     font-size: 12px;
 }
+
+.pin {
+    font-size: 20px;
+    transform: rotate(-25deg);
+}
