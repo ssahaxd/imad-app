@@ -89,15 +89,7 @@ app.get('/:articleName', function(req, res){
   res.send(creatTemplate(req.param.articleName));
 });
 
-// Article two
-app.get('/article-Two', function(req, res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
 
-// Article three
-app.get('/article-three', function(req, res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
