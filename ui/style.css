@@ -515,3 +515,31 @@ margin-bottom: 50px;
     font-size: 20px;
     transform: rotate(-25deg);
 }
+
+/* Badge */
+.badge-notification {
+    display: inline-block;
+    font-weight: normal;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.badge-notification {
+    padding: 2px 5px 2px 5px;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 11px;
+    line-height: 1;
+    text-align: center;
+    background-color: #bdbdbd;
+}
+
+.badge-notification.clicks {
+    font-weight: normal;
+    background-color: #e4e4e4;
+    top: -1px;
+    color: #7a7a7a;
+    position: relative;
+    margin-left: 2px;
+    border: none;
+}
