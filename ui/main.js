@@ -3,5 +3,5 @@ console.log('Loaded!');
 var jet = document.getElementById("jet");
 
 jet.onclick = function(){
-    jet.style.style.fontSize = '100px';
+    jet.style.marginLeft = '20px';
 };
