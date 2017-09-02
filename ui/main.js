@@ -22,7 +22,7 @@ button.onclick = function(){
     request.onreadystatechange = function(){
         if(request.readystate === XMLHttpRequest.DONE && request.status === 200){
                 var counter = request.responseText;
-                var span = document.getElementById("countr-badge");
+                var span = document.getElementById("ctr-bdg");
                 span.innerHTML = counter.toString();
         }
     };
