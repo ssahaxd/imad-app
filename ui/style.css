@@ -162,7 +162,9 @@ button {
 
 button,
 select {
-  text-transform: none; }
+    text-transform: none;
+    
+}
 
 button,
 html input[type="button"],
@@ -414,7 +416,7 @@ body {
 
 .page-home section {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 40px;
     position: relative;
     background-color: rgba(255, 255, 255, 0.7);
