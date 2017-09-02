@@ -25,12 +25,12 @@ app.get('/article-one', function(req, res){
 
 // Article two
 app.get('/article-Two', function(req, res){
-    res.send('Article Two will be served here');
+  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
 
 // Article three
 app.get('/article-three', function(req, res){
-    res.send('Article Three will be served here');
+  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
 
 
