@@ -13,7 +13,7 @@ jet.onclick = function(){
 };
 
 /* Counter Code */
-var button = document.getElementById("button");
+var button = document.getElementById("countr-btn");
 
 button.onclick = function(){
     
@@ -23,7 +23,7 @@ button.onclick = function(){
         if(request.readystate === XMLHttprequest.DONE){
             if(request.status === 200){
                 var counter = request.responseText;
-                var span = document.getElementById("count");
+                var span = document.getElementById("countr-badg");
                 span.innerHTML = counter.toString();
             }
         }
