@@ -20,7 +20,7 @@ button.onclick = function(){
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
-        if(1){
+        if(request.readyState === XMLHttpRequest.DONE){
                 var counter = request.responseText;
                 var span = document.getElementById("ctr-bdg");
                 span.innerHTML = counter.toString();
