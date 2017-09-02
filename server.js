@@ -17,6 +17,17 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+/* Article Handeling */
+// Article one
+app.get('/article-one', function(req, res){
+    res.send('Article one will be served here');
+});
+
+// Article two
+app.get('/article-Two', function(req, res){
+    res.send('Article Two will be served here');
+});
+
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
