@@ -20,7 +20,7 @@ app.get('/ui/main.js', function (req, res) {
 /* Article Handeling */
 // Article one
 app.get('/article-one', function(req, res){
-    res.send('Article One will be served here');
+  res.sendFile(path.join(__dirname, 'ui', 'article.html'));
 });
 
 // Article two
