@@ -1,9 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-const Pool = require('pg');
+var Pool = require('pg');
 
-const pool = new Pool({
+var pool = new Pool({
   user: 'sandipsmoto',
   host: 'localhost',
   database: 'mydb',
