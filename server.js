@@ -1,6 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+const {Pool, Client} = require('pg');
+
+const pool = new Pool({
+  user: 'sandipsmoto',
+  host: 'localhost',
+  database: 'mydb',
+  password: process.env.DB_PASSWORD,
+  port: 5432,
+});
 
 var app = express();
 app.use(morgan('combined'));
@@ -16,6 +25,19 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+
+/* DaraBase - test */
+
+app.get('\test', function(req, res){
+    // make a select command
+    pool.query('SELECT * form test', function (err, result){
+        if(err)
+            res.status(500).send(err.toString());    
+        else
+            res.send(JSON.stringify(result))
+    });
+});
+
 
 
 /* Article Objects */
