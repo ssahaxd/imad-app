@@ -7,7 +7,6 @@ var config = {
     host: 'http://db.imad.hasura-app.io',
     database: 'sandipsmoto',
     password: 'db-sandipsmoto-10353',
-    port: 5432,
 };
 
 var pool = new Pool(config);
