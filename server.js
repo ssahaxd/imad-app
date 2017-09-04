@@ -7,8 +7,8 @@ var pool = new Pool({
   user: 'sandipsmoto',
   host: 'localhost',
   database: 'mydb',
-  password: process.env.DB_PASSWORD,
   port: 5432,
+  password: process.env.DB_PASSWORD
 });
 
 var app = express();
