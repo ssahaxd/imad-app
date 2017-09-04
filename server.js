@@ -61,35 +61,35 @@ app.get('/counter', function(req, res) {
 
 
 /* Article Handeling */
-// app.get('/articles/:articleName', function(req, res){
-//     var articleName = req.params.articleName;
-//     pool.query('SELECT * FROM "test"', function (err, result){
-//         if(err)
-//             res.status(500).send(err.toString());    
-//         else{
-//             if(result.woe.length === 0){
-//                 res.status(404).send('Article not found'); 
-//             }
-//             else{
-//                 var data = result.rows[0];
-//             }
-//         }
-//     });
-    
-//   res.send(creatTemplate(articles[articleName]));
-// });
+app.get('/articles/:articleName', function(req, res){
+    var articleName = req.params.articleName;
+    pool.query('SELECT * FROM "articles" WHERE title =' + articleName, function (err, result){
+        if(err){
+            res.status(500).send(err.toString());    
+        }
+        else{
+            if(result.woe.length === 0){
+                res.status(404).send('Article not found'); 
+            }
+            else{
+                var data = result.rows[0];
+                res.send(creatTemplate(data));
+            }
+        }
+    });
+});
 
 
 /* DataBase - test */
-app.get('/test', function(req, res){
-    // make a select command
-    pool.query('SELECT * FROM "articles"', function (err, result){
-        if(err)
-            res.status(500).send(err.toString());    
-        else
-            res.send(JSON.stringify(result.rows));
-    });
-});
+// app.get('/test', function(req, res){
+//     // make a select command
+//     pool.query('SELECT * FROM "articles"', function (err, result){
+//         if(err)
+//             res.status(500).send(err.toString());    
+//         else
+//             res.send(JSON.stringify(result.rows));
+//     });
+// });
 
 
 
