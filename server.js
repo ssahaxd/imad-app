@@ -83,7 +83,7 @@ app.get('/counter', function(req, res) {
 /* DataBase - test */
 app.get('/test', function(req, res){
     // make a select command
-    pool.query('SELECT * FROM "test"', function (err, result){
+    pool.query('SELECT * FROM "articles"', function (err, result){
         if(err)
             res.status(500).send(err.toString());    
         else
