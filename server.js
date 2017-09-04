@@ -28,7 +28,7 @@ app.get('/ui/main.js', function (req, res) {
 
 /* DaraBase - test */
 
-app.get('\test', function(req, res){
+app.get('/test', function(req, res){
     // make a select command
     pool.query('SELECT * form test', function (err, result){
         if(err)
