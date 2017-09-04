@@ -25,18 +25,6 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-/* DaraBase - test */
-app.get('/test', function(req, res){
-    // make a select command
-    pool.query('SELECT * FROM "test"', function (err, result){
-        if(err)
-            res.status(500).send(err.toString());    
-        else
-            res.send(JSON.stringify(result.rows));
-    });
-});
-
-
 /* Template function */
 function creatTemplate(data){
   var htmlTemplate = `
@@ -71,13 +59,37 @@ app.get('/counter', function(req, res) {
     res.send(counter.toString());
 });
 
+
 /* Article Handeling */
+// app.get('/articles/:articleName', function(req, res){
+//     var articleName = req.params.articleName;
+//     pool.query('SELECT * FROM "test"', function (err, result){
+//         if(err)
+//             res.status(500).send(err.toString());    
+//         else{
+//             if(result.woe.length === 0){
+//                 res.status(404).send('Article not found'); 
+//             }
+//             else{
+//                 var data = result.rows[0];
+//             }
+//         }
+//     });
+    
+//   res.send(creatTemplate(articles[articleName]));
+// });
 
-app.get('/:articleName', function(req, res){
-    var articleName = req.params.articleName;
-  res.send(creatTemplate(articles[articleName]));
+
+/* DataBase - test */
+app.get('/test', function(req, res){
+    // make a select command
+    pool.query('SELECT * FROM "test"', function (err, result){
+        if(err)
+            res.status(500).send(err.toString());    
+        else
+            res.send(JSON.stringify(result.rows[0]));
+    });
 });
-
 
 
 
