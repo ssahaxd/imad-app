@@ -30,7 +30,7 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/test', function(req, res){
     // make a select command
-    pool.query('SELECT * from test', function (err, result){
+    pool.query('SELECT * FROM "test"', function (err, result){
         if(err)
             res.status(500).send(err.toString());    
         else
