@@ -61,7 +61,7 @@ app.get('/counter', function(req, res) {
 
 
 /* Article Handeling */
-app.get('/articles/:articleName', function(req, res){
+app.get('/:articleName', function(req, res){
     var articleName = req.params.articleName;
     pool.query('SELECT * FROM "articles" WHERE "title" =' + articleName, function (err, result){
         if(err){
