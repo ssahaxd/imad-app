@@ -2,9 +2,15 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var connectionString = 'postgresql://sandipsmoto:db-sandipsmoto-10353@http://db.imad.hasura-app.io:5432/sandipsmoto';
+var config = {
+    user: 'sandipsmoto',
+    host: 'http://db.imad.hasura-app.io',
+    database: 'sandipsmoto',
+    password: 'db-sandipsmoto-10353',
+    port: 5432,
+};
 
-var pool = new Pool(connectionString);
+var pool = new Pool(config);
 
 var app = express();
 app.use(morgan('combined'));
