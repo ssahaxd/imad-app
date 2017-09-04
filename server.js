@@ -2,14 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
+var connectionString = 'postgresql://sandipsmoto:db-sandipsmoto-10353@localhost:5432/sandipsmoto'
 
-var pool = new Pool({
-  user: 'sandipsmoto',
-  host: 'localhost',
-  database: 'mydb',
-  port: 5432,
-  password: 'db-sandipsmoto-10353'
-});
+var pool = new Pool(connectionString);
 
 var app = express();
 app.use(morgan('combined'));
