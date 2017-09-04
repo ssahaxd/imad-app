@@ -26,15 +26,7 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 /* DaraBase - test */
-app.get('/test', function(req, res){
-    // make a select command
-    pool.query('SELECT * FROM "test"', function (err, result){
-        if(err)
-            res.status(500).send(err.toString());    
-        else
-            res.send(JSON.stringify(result.rows));
-    });
-});
+
 
 
 /* Template function */
