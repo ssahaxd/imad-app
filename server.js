@@ -26,7 +26,6 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 /* DaraBase - test */
-
 app.get('/test', function(req, res){
     // make a select command
     pool.query('SELECT * FROM "test"', function (err, result){
@@ -66,11 +65,11 @@ function creatTemplate(data){
 }
 
 /* Counter Code */
-var counter = 0;
+/*var counter = 0;
 app.get('/counter', function(req, res) {
     counter = counter + 1;
     res.send(counter.toString());
-});
+});*/
 
 /* Article Handeling */
 
